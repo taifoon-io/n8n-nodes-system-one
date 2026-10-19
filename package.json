@@ -1,6 +1,6 @@
 {
   "name": "@taifoon/n8n-nodes-system-one",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "System One for n8n: ask yes/no, pick-one and score questions about any item and get every answer with its probabilities. TypeSafe hosts it by default; any host serving the System One API works.",
   "keywords": [
     "n8n-community-node-package",

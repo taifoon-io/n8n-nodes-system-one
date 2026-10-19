@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-label="support triage: one call, three answers, branch on the number">
+<title>support triage: one call, three answers, branch on the number</title>
+<defs>
+  <pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="rgba(230,240,247,0.05)" stroke-width="1"/></pattern>
+  <radialGradient id="glow" cx="78%" cy="40%" r="55%"><stop offset="0" stop-color="#3DA5FF" stop-opacity="0.18"/><stop offset="1" stop-color="#3DA5FF" stop-opacity="0"/></radialGradient>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="rgba(230,240,247,0.55)"/></marker>
+</defs>
+<rect width="1280" height="360" fill="#000000"/><rect width="1280" height="360" fill="url(#g)"/><rect width="1280" height="360" fill="url(#glow)"/>
+<path d="M159 152 C241 152 241 152 323 152" fill="none" stroke="rgba(230,240,247,0.55)" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M419 152 C506 152 506 152 593 152" fill="none" stroke="rgba(230,240,247,0.55)" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M689 138 C791 138 791 82 893 82" fill="none" stroke="rgba(230,240,247,0.55)" stroke-width="1.5" marker-end="url(#arrow)"/><text x="791" y="102" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#00B5B8">true</text>
+<path d="M689 166 C791 166 791 232 893 232" fill="none" stroke="rgba(230,240,247,0.55)" stroke-width="1.5" marker-end="url(#arrow)"/><text x="791" y="191" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#00B5B8">false</text>
+<g><rect x="70" y="110" width="84" height="84" fill="#030305" stroke="rgba(230,240,247,0.10)" stroke-width="1"/>
+<text x="112" y="163" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" fill="#E6F0F7">@</text>
+
+<rect x="149" y="147" width="10" height="10" fill="rgba(230,240,247,0.55)"/>
+<text x="112" y="218" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="#E6F0F7">New ticket</text><text x="112" y="236" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="rgba(230,240,247,0.55)">Gmail · Webhook</text></g>
+<g><rect x="330" y="110" width="84" height="84" fill="rgba(61,165,255,0.08)" stroke="#3DA5FF" stroke-width="2"/>
+<text x="372" y="163" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" fill="#3DA5FF">S1</text>
+<rect x="325" y="147" width="10" height="10" fill="#000000" stroke="rgba(230,240,247,0.55)"/>
+<rect x="409" y="147" width="10" height="10" fill="rgba(230,240,247,0.55)"/>
+<text x="372" y="218" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="#E6F0F7">System One</text><text x="372" y="236" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#3DA5FF">is_refund · team · urgency</text></g>
+<g><rect x="600" y="110" width="84" height="84" fill="#030305" stroke="rgba(230,240,247,0.10)" stroke-width="1"/>
+<text x="642" y="163" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" fill="#E6F0F7">?</text>
+<rect x="595" y="147" width="10" height="10" fill="#000000" stroke="rgba(230,240,247,0.55)"/>
+<rect x="679" y="133" width="10" height="10" fill="rgba(230,240,247,0.55)"/><rect x="679" y="161" width="10" height="10" fill="rgba(230,240,247,0.55)"/>
+<text x="642" y="218" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="#E6F0F7">IF</text><text x="642" y="236" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="rgba(230,240,247,0.55)">answers.is_refund.p ≥ 0.8</text></g>
+<g><rect x="900" y="40" width="84" height="84" fill="#030305" stroke="rgba(230,240,247,0.10)" stroke-width="1"/>
+<text x="942" y="93" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" fill="#E6F0F7">$</text>
+<rect x="895" y="77" width="10" height="10" fill="#000000" stroke="rgba(230,240,247,0.55)"/>
+
+<text x="942" y="148" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="#E6F0F7">Billing queue</text></g>
+<g><rect x="900" y="190" width="84" height="84" fill="#030305" stroke="rgba(230,240,247,0.10)" stroke-width="1"/>
+<text x="942" y="243" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="30" fill="#E6F0F7">→</text>
+<rect x="895" y="227" width="10" height="10" fill="#000000" stroke="rgba(230,240,247,0.55)"/>
+
+<text x="942" y="298" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="#E6F0F7">Everyone else</text></g>
+<text x="32" y="338" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="1.5" fill="rgba(230,240,247,0.55)">SUPPORT TRIAGE: ONE CALL, THREE ANSWERS, BRANCH ON THE NUMBER</text>
+</svg>
