@@ -1,0 +1,30 @@
+{
+  "name": "System One: triage a support ticket, then branch on the probabilities",
+  "nodes": [
+    { "parameters": {}, "name": "Start", "type": "n8n-nodes-base.manualTrigger", "typeVersion": 1, "position": [0, 300] },
+    { "parameters": { "assignments": { "assignments": [
+        { "id": "a1", "name": "subject", "value": "Charged twice this month", "type": "string" },
+        { "id": "a2", "name": "body", "value": "Hi, my card was charged twice for the March invoice. Please refund one of them.", "type": "string" } ] }, "options": {} },
+      "name": "Ticket", "type": "n8n-nodes-base.set", "typeVersion": 3.4, "position": [220, 300] },
+    { "parameters": { "model": "jev-latest", "state": "={{ JSON.stringify($json) }}",
+        "questions": { "question": [
+          { "id": "is_refund", "kind": "noul", "text": "Is the customer asking for money back?" },
+          { "id": "team", "kind": "choice", "text": "Which team should handle this ticket?", "options": "billing = payments, invoices and refunds; technical = bugs and outages; sales = plans and pricing" },
+          { "id": "urgency", "kind": "score", "text": "How urgent is this ticket?", "levels": "None | Low | Medium | High" } ] },
+        "questionsJson": "[]", "failClosed": true, "rawOutput": false },
+      "name": "System One", "type": "@taifoon/n8n-nodes-system-one.systemOne", "typeVersion": 1, "position": [440, 300],
+      "credentials": { "systemOneApi": { "id": "", "name": "System One API (your key)" } } },
+    { "parameters": { "conditions": { "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict", "version": 2 },
+        "conditions": [ { "id": "c1", "leftValue": "={{ $json.answers.is_refund.p }}", "rightValue": 0.8, "operator": { "type": "number", "operation": "gte" } } ], "combinator": "and" }, "options": {} },
+      "name": "Refund, and sure of it?", "type": "n8n-nodes-base.if", "typeVersion": 2.2, "position": [660, 300] },
+    { "parameters": {}, "name": "Send to billing", "type": "n8n-nodes-base.noOp", "typeVersion": 1, "position": [880, 200] },
+    { "parameters": {}, "name": "Everything else", "type": "n8n-nodes-base.noOp", "typeVersion": 1, "position": [880, 400] }
+  ],
+  "connections": {
+    "Start": { "main": [[{ "node": "Ticket", "type": "main", "index": 0 }]] },
+    "Ticket": { "main": [[{ "node": "System One", "type": "main", "index": 0 }]] },
+    "System One": { "main": [[{ "node": "Refund, and sure of it?", "type": "main", "index": 0 }]] },
+    "Refund, and sure of it?": { "main": [[{ "node": "Send to billing", "type": "main", "index": 0 }], [{ "node": "Everything else", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" }, "pinData": {}, "meta": { "templateCredsSetupCompleted": false }
+}

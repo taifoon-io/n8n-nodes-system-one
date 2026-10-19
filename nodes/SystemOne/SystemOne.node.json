@@ -1,0 +1,1 @@
+{ "node": "@taifoon/n8n-nodes-system-one.systemOne", "nodeVersion": "1.0", "codexVersion": "1.0", "categories": ["Utility", "Data & Storage"], "resources": { "primaryDocumentation": [{ "url": "https://github.com/taifoon-io/n8n-nodes-system-one#readme" }] } }

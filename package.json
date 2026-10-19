@@ -1,0 +1,79 @@
+{
+  "name": "@taifoon/n8n-nodes-system-one",
+  "version": "1.0.0",
+  "description": "System One for n8n: ask yes/no, pick-one and score questions about any item and get every answer with its probabilities. TypeSafe hosts it by default; any host serving the System One API works.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "system-one",
+    "typesafe",
+    "jev",
+    "classification",
+    "structured-output",
+    "probability",
+    "confidence",
+    "grading"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/taifoon-io/n8n-nodes-system-one#readme",
+  "author": {
+    "name": "Taifoon",
+    "email": "yawning.monsoon@proton.me",
+    "url": "https://github.com/taifoon-io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taifoon-io/n8n-nodes-system-one.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taifoon-io/n8n-nodes-system-one/issues"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "n8n-node build",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release",
+    "prepublishOnly": "n8n-node prerelease",
+    "test": "node --test test/node.test.mjs",
+    "scan": "node scripts/scan.mjs"
+  },
+  "files": [
+    "dist",
+    "!dist/tsconfig.tsbuildinfo",
+    "!dist/**/*.map",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": [
+      "dist/credentials/SystemOneApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/SystemOne/SystemOne.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "^0.52.6",
+    "eslint": "^9.39.5",
+    "typescript": "5.9.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "peerDependenciesMeta": {
+    "n8n-workflow": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
