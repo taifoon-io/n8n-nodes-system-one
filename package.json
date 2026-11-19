@@ -38,7 +38,7 @@
     "lint": "n8n-node lint",
     "lint:fix": "n8n-node lint --fix",
     "release": "n8n-node release",
-    "prepublishOnly": "n8n-node prerelease",
+    "prepublishOnly": "pack-guard && n8n-node prerelease",
     "test": "node --test test/node.test.mjs",
     "scan": "node scripts/scan.mjs"
   },
